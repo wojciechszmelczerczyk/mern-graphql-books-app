@@ -18,6 +18,8 @@
   "dependencies": {
     "apollo-server": "^3.10.1",
     "graphql": "^16.6.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "mongodb": "^4.8.1",
+    "mongoose": "^6.5.2"
   }
 }
