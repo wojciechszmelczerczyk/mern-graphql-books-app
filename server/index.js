@@ -1,16 +1,7 @@
-import express from "express";
-import { graphqlHTTP } from "express-graphql";
-import schema from "./graphql/schema.js";
-const app = express();
+import { ApolloServer } from "apollo-server";
+import { typeDefs } from "./graphql/schema.js";
+import { resolvers } from "./graphql/resolvers.js";
 
-app.use(
-  "/graphql",
-  graphqlHTTP({
-    schema,
-    graphiql: true,
-  })
-);
+const server = new ApolloServer({ typeDefs, resolvers });
 
-const port = process.env.PORT || 4000;
-
-app.listen(port, () => console.log(`Listening on port ${port}`));
+server.listen().then(({ url }) => console.log(`🚀 Server ready at ${url}`));

@@ -10,7 +10,7 @@ Books application
 
 ## Techstack
 
-- `Node/Express`
 - `React`
 - `GraphQL`
+- `Apollo Server`
 - `Apollo Client`
