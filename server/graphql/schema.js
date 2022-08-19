@@ -4,18 +4,27 @@ const typeDefs = gql`
   type Book {
     id: ID
     title: String
-    author: Author
+    genre: String
+    author: Author!
   }
 
   input newBookInput {
     id: ID
     title: String
+    genre: String
   }
 
   type Author {
     id: ID
     name: String
-    books: [Book]
+    age: Int
+    books: [Book!]
+  }
+
+  input newAuthorInput {
+    id: ID
+    name: String
+    age: Int
   }
 
   type Query {
@@ -27,6 +36,7 @@ const typeDefs = gql`
 
   type Mutation {
     newBook(input: newBookInput!): Book!
+    newAuthor(input: newAuthorInput!): Author!
   }
 `;
 
