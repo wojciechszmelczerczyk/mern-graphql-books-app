@@ -5,13 +5,14 @@ const typeDefs = gql`
     id: ID
     title: String
     genre: String
-    author: Author!
+    author: Author
   }
 
   input newBookInput {
     id: ID
     title: String
     genre: String
+    authorId: String
   }
 
   type Author {
@@ -22,7 +23,6 @@ const typeDefs = gql`
   }
 
   input newAuthorInput {
-    id: ID
     name: String
     age: Int
   }

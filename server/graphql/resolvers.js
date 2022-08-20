@@ -32,7 +32,7 @@ const resolvers = {
 
   Mutation: {
     async newBook(_, { input }) {
-      const newBook = await Book.create(input);
+      const newBook = await Book.create({ ...input, author: input.authorId });
       return newBook;
     },
     async newAuthor(_, { input }) {
