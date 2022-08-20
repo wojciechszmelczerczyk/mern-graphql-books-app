@@ -1,12 +1,12 @@
 // Using ES6 imports
 import mongoose from "mongoose";
+import { config } from "dotenv";
+
+config();
 
 export default () => {
-  return mongoose.connect(
-    "mongodb+srv://wojtek1702:eSYw9n1kafIUSuCU@cluster0.o3xtl.mongodb.net/library",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  );
+  return mongoose.connect(process.env.DB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
 };
