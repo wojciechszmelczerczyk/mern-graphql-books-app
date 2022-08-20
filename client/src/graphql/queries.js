@@ -3,11 +3,28 @@ import { gql } from "@apollo/client";
 export const GET_BOOKS = gql`
   query GetBooks {
     books {
+      id
       title
       genre
       author {
         name
         age
+      }
+    }
+  }
+`;
+
+export const GET_BOOK = gql`
+  query GetBook($id: ID!) {
+    book(id: $id) {
+      title
+      genre
+      author {
+        name
+        books {
+          title
+          genre
+        }
       }
     }
   }
