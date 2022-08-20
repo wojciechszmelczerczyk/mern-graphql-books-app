@@ -9,7 +9,10 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   cors: {
-    origin: ["http://localhost:3000", "https://studio.apollographql.com"],
+    origin: [
+      "http://localhost:3000",
+      "https://studio.apollographql.com/sandbox/explorer",
+    ],
   },
 });
 
