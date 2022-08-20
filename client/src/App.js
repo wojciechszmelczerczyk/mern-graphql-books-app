@@ -3,7 +3,8 @@ import CreateBook from "./components/CreateBook";
 
 function App() {
   return (
-    <div>
+    <div className='main'>
+      <h1>Books</h1>
       <BookList />
       <CreateBook />
     </div>

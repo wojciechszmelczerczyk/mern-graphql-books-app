@@ -11,20 +11,19 @@ function GetBooks() {
   console.log(bookId);
   return (
     <div>
-      <h1>Books</h1>
       {loading ? (
         <p>Loading...</p>
       ) : (
-        data.books.map((book) => (
-          <ul className='book' key={book.title}>
+        <ul className='bookList'>
+          {data.books.map((book) => (
             <li
               style={{ cursor: "pointer" }}
               onClick={() => setBookId(book.id)}
             >
               {book.title}
             </li>
-          </ul>
-        ))
+          ))}
+        </ul>
       )}
       <BookDetails bookId={bookId} />
     </div>

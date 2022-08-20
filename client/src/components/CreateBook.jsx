@@ -28,16 +28,17 @@ function CreateBook() {
   };
 
   return (
-    <form onSubmit={handleForm}>
-      <div>
+    <form className='addBook' onSubmit={handleForm}>
+      <div className='field'>
         <label>Book name: </label>
         <input type='text' onChange={(e) => setBookTitle(e.target.value)} />
       </div>
-      <div>
+      <div className='field'>
         <label>Genre: </label>
         <input type='text' onChange={(e) => setBookGenre(e.target.value)} />
       </div>
-      <div>
+      <div className='field'>
+        <label>Author:</label>
         <select onChange={(e) => setBookAuthorId(e.target.value)}>
           <option>Select author</option>
           {data.authors.map((author) => (

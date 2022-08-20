@@ -7,15 +7,14 @@ function CreateBook({ bookId }) {
     variables: { id: bookId },
   });
 
-  if (error) return <p>Error :</p>;
+  if (error) return;
 
   if (loading) return <p>Loading...</p>;
 
   if (data) {
     return (
-      <div>
-        <h3>Book title:</h3>
-        <p>{data.book.title}</p>
+      <div className='bookDetails'>
+        <h1>{data.book.title}</h1>
         <h3>Genre:</h3>
         <p>{data.book.genre}</p>
         <h3>Author:</h3>
