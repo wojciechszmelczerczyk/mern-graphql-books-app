@@ -1,6 +1,5 @@
 import Author from "../models/Author.js";
 import Book from "../models/Book.js";
-import mongoose from "mongoose";
 
 const resolvers = {
   Query: {
