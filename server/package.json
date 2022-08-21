@@ -19,6 +19,7 @@
     "apollo-server": "^3.10.1",
     "app-root-path": "^3.1.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "graphql": "^16.6.0",
     "lodash": "^4.17.21",
     "mongodb": "^4.8.1",
